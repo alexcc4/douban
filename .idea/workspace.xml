@@ -50,10 +50,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="filmSpider.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="filmSpider.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/douban/spiders/filmSpider.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="19" selection-start="447" selection-end="492" vertical-scroll-proportion="0.31357256" vertical-offset="179" max-vertical-offset="940">
+            <state line="19" column="19" selection-start="447" selection-end="492" vertical-scroll-proportion="0.0" vertical-offset="179" max-vertical-offset="940">
               <folding>
                 <element signature="e#46#98#0" expanded="true" />
               </folding>
@@ -61,10 +61,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="settings.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/douban/settings.py">
+      <file leaf-file-name=".gitigore" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitigore">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="35" selection-start="348" selection-end="348" vertical-scroll-proportion="0.0" vertical-offset="260" max-vertical-offset="640">
+            <state line="3" column="0" selection-start="21" selection-end="21" vertical-scroll-proportion="0.093603745" vertical-offset="0" max-vertical-offset="641">
               <folding />
             </state>
           </provider>
@@ -95,6 +95,7 @@
         <option value="$PROJECT_DIR$/douban/settings.py" />
         <option value="$PROJECT_DIR$/douban/items.py" />
         <option value="$PROJECT_DIR$/douban/spiders/filmSpider.py" />
+        <option value="$PROJECT_DIR$/.gitigore" />
       </list>
     </option>
   </component>
@@ -365,7 +366,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33894584" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33894584" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
@@ -528,10 +529,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/douban/spiders/filmSpider.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="19" selection-start="447" selection-end="492" vertical-scroll-proportion="0.31357256" vertical-offset="179" max-vertical-offset="940">
+        <state line="19" column="19" selection-start="447" selection-end="492" vertical-scroll-proportion="0.0" vertical-offset="179" max-vertical-offset="940">
           <folding>
             <element signature="e#46#98#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitigore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="0" selection-start="21" selection-end="21" vertical-scroll-proportion="0.093603745" vertical-offset="0" max-vertical-offset="641">
+          <folding />
         </state>
       </provider>
     </entry>
