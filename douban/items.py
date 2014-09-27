@@ -14,6 +14,7 @@ class FilmItem(Item):
     pass
     info = Field()
     synopsis = Field()
-    labels = Field()
+    tags = Field()
     commentary = Field()
-    critics = Field()
+    reviews = Field()
+    status = Field()
