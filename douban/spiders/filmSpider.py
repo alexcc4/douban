@@ -2,12 +2,13 @@
 __author__ = 'alex'
 
 import re
+import time
 
-from scrapy.contrib.spiders import CrawlSpider, Rule
-from scrapy.contrib.linkextractors import LinkExtractor
+from scrapy.contrib.spiders import CrawlSpider
 from scrapy import log
 from scrapy import Selector
 from scrapy import Request
+from douban.mongo.mongo import mongoCon
 
 from douban.items import FilmItem
 
@@ -50,6 +51,7 @@ class FilmSpider(CrawlSpider):
         @parse the film item from the page
         '''
         status = response.request.headers["status"]
+        log.msg(response.url + '~~~~~~~~~~~~~~~~~~~~~')
 
         sel = Selector(response)
         content = response.body
@@ -70,8 +72,8 @@ class FilmSpider(CrawlSpider):
         language_reg = r'''<span class="pl">语言:</span>(.*?)<'''
         aliases_reg = r'''<span class="pl">又名:</span>(.*?)<'''
         IMDb_reg = r'''<span class="pl">IMDb链接:</span>\s*<a.*?href="(.*?)"'''
-        infomation["producedIn"] = re.compile(producedIn_reg, re.S).search(content).group(1).decode('utf-8')
-        infomation["language"] = re.compile(language_reg, re.S).search(content).group(1).decode('utf-8')
+        infomation["producedIn"] = re.compile(producedIn_reg, re.S).search(content).group(1)
+        infomation["language"] = re.compile(language_reg, re.S).search(content).group(1)
 
         aliases_res = re.compile(aliases_reg, re.S).search(content)
         if aliases_res:
@@ -85,9 +87,9 @@ class FilmSpider(CrawlSpider):
         if length_res:
             infomation["length"] = length_res.extract()[0]
         #TODO decode('utf-8')?
-        item["synopsis"] = sel.xpath("//span[@property='v:summary']/text()")[0].extract().decode('utf-8')
+        item["synopsis"] = sel.xpath("//span[@property='v:summary']/text()")[0].extract()
         item["tags"] = sel.xpath("//div[@class='tags-body']/a/text()").extract()
-
+        item['status'] = status
         commentary_res = sel.xpath("//div[@class='comment']/p/text()").extract()
         if commentary_res:
             item["commentary"] = commentary_res
@@ -96,5 +98,13 @@ class FilmSpider(CrawlSpider):
             item["reviews"] = review_res
 
         item["info"] = infomation
-        log.msg(item["tags"][0].decode('utf-8') + '~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
+        item['createAt'] = int(time.time() * 1000)
+        mongo = mongoCon()
+        if mongo:
+            films = mongo.douban.films
+            if not films.find_one({"name": infomation['name'], "year": infomation['year']}):
+                films.insert(dict(item))
+            else:
+                films.update({"name": infomation['name'], "year": infomation['year']}, dict(item))
+        # log.msg(item["tags"][0].decode('utf-8') + '~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
 

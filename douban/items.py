@@ -18,3 +18,4 @@ class FilmItem(Item):
     commentary = Field()
     reviews = Field()
     status = Field()
+    createAt = Field()

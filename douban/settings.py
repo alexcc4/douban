@@ -22,5 +22,9 @@ DOWNLOADER_MIDDLEWARES = {
         'scrapy.contrib.downloadermiddleware.useragent.UserAgentMiddleware' : None,
         'douban.spiders.rotate_useragent.RotateUserAgentMiddleware': 400
     }
+
+DB_HOST = 'localhost'
+DB_PORT = 27017
+DB = 'films'
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'douban (+http://www.yourdomain.com)'
