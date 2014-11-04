@@ -12,7 +12,8 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/douban$get_films.coverage" NAME="get_films Coverage Results" MODIFIED="1415116462361" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/douban$get_films.coverage" NAME="get_films Coverage Results" MODIFIED="1415118657617" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/douban$personSpider.coverage" NAME="personSpider Coverage Results" MODIFIED="1415118647309" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/douban/spiders" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -29,8 +30,10 @@
       <file leaf-file-name="get_films.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/get_films.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="13" selection-start="473" selection-end="473" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="460">
-              <folding />
+            <state line="18" column="13" selection-start="558" selection-end="558" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="580">
+              <folding>
+                <element signature="e#46#82#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -47,8 +50,19 @@
       <file leaf-file-name="person.json" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/person.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="0" selection-start="2" selection-end="2" vertical-scroll-proportion="-0.6896552" vertical-offset="0" max-vertical-offset="160">
+            <state line="11" column="11" selection-start="176" selection-end="176" vertical-scroll-proportion="-7.586207" vertical-offset="0" max-vertical-offset="400">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="personSpider.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/douban/spiders/personSpider.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="63" column="0" selection-start="1904" selection-end="1904" vertical-scroll-proportion="0.59038144" vertical-offset="904" max-vertical-offset="1540">
+              <folding>
+                <element signature="e#46#55#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -62,10 +76,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="filmSpider.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="filmSpider.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/douban/spiders/filmSpider.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="109" column="0" selection-start="4514" selection-end="4514" vertical-scroll-proportion="0.71311474" vertical-offset="1832" max-vertical-offset="2320">
+            <state line="23" column="18" selection-start="0" selection-end="4515" vertical-scroll-proportion="0.0" vertical-offset="300" max-vertical-offset="2320">
               <folding>
                 <element signature="e#46#55#0" expanded="true" />
               </folding>
@@ -112,8 +126,10 @@
         <option value="$PROJECT_DIR$/douban/settings.py" />
         <option value="$PROJECT_DIR$/douban/spiders/filmSpider.py" />
         <option value="$PROJECT_DIR$/douban/items.py" />
-        <option value="$PROJECT_DIR$/person.json" />
         <option value="$PROJECT_DIR$/.gitigore" />
+        <option value="$PROJECT_DIR$/person.json" />
+        <option value="$PROJECT_DIR$/get_films.py" />
+        <option value="$PROJECT_DIR$/douban/spiders/personSpider.py" />
       </list>
     </option>
   </component>
@@ -195,6 +211,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="spiders" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="douban" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="douban" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="douban" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="mongo" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -234,6 +268,25 @@
       <module name="douban" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/get_films.py" />
+      <option name="PARAMETERS" value="" />
+      <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PythonRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="personSpider" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/douban/spiders" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="douban" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/douban/spiders/personSpider.py" />
       <option name="PARAMETERS" value="" />
       <RunnerSettings RunnerId="PythonRunner" />
       <ConfigurationWrapper RunnerId="PythonRunner" />
@@ -389,12 +442,14 @@
       <option name="USE_PATTERN" value="false" />
       <method />
     </configuration>
-    <list size="1">
+    <list size="2">
       <item index="0" class="java.lang.String" itemvalue="Python.get_films" />
+      <item index="1" class="java.lang.String" itemvalue="Python.personSpider" />
     </list>
     <recent_temporary>
-      <list size="1">
+      <list size="2">
         <item index="0" class="java.lang.String" itemvalue="Python.get_films" />
+        <item index="1" class="java.lang.String" itemvalue="Python.personSpider" />
       </list>
     </recent_temporary>
   </component>
@@ -420,7 +475,7 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20864381" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.37704918" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -476,13 +531,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/douban/items.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="0" selection-start="422" selection-end="422" vertical-scroll-proportion="0.0" vertical-offset="400" max-vertical-offset="520">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/douban/spiders/filmSpider.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="4" column="0" selection-start="56" selection-end="56" vertical-scroll-proportion="0.0" vertical-offset="80" max-vertical-offset="2120">
@@ -524,7 +572,9 @@
     <entry file="file://$PROJECT_DIR$/get_films.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="3" column="0" selection-start="46" selection-end="46" vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="540">
-          <folding />
+          <folding>
+            <element signature="e#46#82#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -559,7 +609,9 @@
     <entry file="file://$PROJECT_DIR$/get_films.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="3" column="0" selection-start="46" selection-end="46" vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="540">
-          <folding />
+          <folding>
+            <element signature="e#46#82#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -594,7 +646,9 @@
     <entry file="file://$PROJECT_DIR$/get_films.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="3" column="0" selection-start="46" selection-end="46" vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="540">
-          <folding />
+          <folding>
+            <element signature="e#46#82#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -629,7 +683,9 @@
     <entry file="file://$PROJECT_DIR$/get_films.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="3" column="0" selection-start="46" selection-end="46" vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="540">
-          <folding />
+          <folding>
+            <element signature="e#46#82#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -664,7 +720,9 @@
     <entry file="file://$PROJECT_DIR$/get_films.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="17" column="0" selection-start="474" selection-end="474" vertical-scroll-proportion="0.0" vertical-offset="340" max-vertical-offset="540">
-          <folding />
+          <folding>
+            <element signature="e#46#82#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -704,7 +762,9 @@
     <entry file="file://$PROJECT_DIR$/get_films.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="17" column="0" selection-start="474" selection-end="474" vertical-scroll-proportion="0.0" vertical-offset="340" max-vertical-offset="540">
-          <folding />
+          <folding>
+            <element signature="e#46#82#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -744,7 +804,9 @@
     <entry file="file://$PROJECT_DIR$/get_films.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="17" column="0" selection-start="474" selection-end="474" vertical-scroll-proportion="0.0" vertical-offset="340" max-vertical-offset="540">
-          <folding />
+          <folding>
+            <element signature="e#46#82#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -772,13 +834,6 @@
     <entry file="file://$PROJECT_DIR$/douban/spiders/rotate_useragent.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="23" column="3" selection-start="523" selection-end="523" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1520">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/get_films.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="13" selection-start="473" selection-end="473" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="460">
           <folding />
         </state>
       </provider>
@@ -814,23 +869,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/person.json">
+    <entry file="file://$PROJECT_DIR$/.gitigore">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="2" selection-end="2" vertical-scroll-proportion="-0.6896552" vertical-offset="0" max-vertical-offset="160">
+        <state line="4" column="0" selection-start="32" selection-end="32" vertical-scroll-proportion="0.16806723" vertical-offset="0" max-vertical-offset="476">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitigore">
+    <entry file="file://$PROJECT_DIR$/person.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="0" selection-start="31" selection-end="31" vertical-scroll-proportion="0.16806723" vertical-offset="0" max-vertical-offset="476">
+        <state line="11" column="11" selection-start="176" selection-end="176" vertical-scroll-proportion="-7.586207" vertical-offset="0" max-vertical-offset="400">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/douban/spiders/filmSpider.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="109" column="0" selection-start="4514" selection-end="4514" vertical-scroll-proportion="0.71311474" vertical-offset="1832" max-vertical-offset="2320">
+        <state line="23" column="18" selection-start="0" selection-end="4515" vertical-scroll-proportion="0.0" vertical-offset="300" max-vertical-offset="2320">
+          <folding>
+            <element signature="e#46#55#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/get_films.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="13" selection-start="558" selection-end="558" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="580">
+          <folding>
+            <element signature="e#46#82#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/douban/spiders/personSpider.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="63" column="0" selection-start="1904" selection-end="1904" vertical-scroll-proportion="0.59038144" vertical-offset="904" max-vertical-offset="1540">
           <folding>
             <element signature="e#46#55#0" expanded="true" />
           </folding>

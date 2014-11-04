@@ -1,3 +1,15 @@
 {
-
+    "id": "",
+    "name": "",
+    "summary": "",
+    "introduction": "",
+    "city": "",
+    "joinAt": "",
+    "diaries": [
+    {
+    	"time": "",
+    	"content": ""
+    	}],
+    "pics": [],
+    "broadcast": []
 }
