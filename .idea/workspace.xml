@@ -106,7 +106,6 @@
       <list>
         <option value="$PROJECT_DIR$/douban/get_films.py" />
         <option value="$PROJECT_DIR$/douban/spiders/rotate_useragent.py" />
-        <option value="$PROJECT_DIR$/.gitigore" />
         <option value="$PROJECT_DIR$/film.json" />
         <option value="$PROJECT_DIR$/douban/mongo/__init__.py" />
         <option value="$PROJECT_DIR$/douban/mongo/mongo.py" />
@@ -114,6 +113,7 @@
         <option value="$PROJECT_DIR$/douban/spiders/filmSpider.py" />
         <option value="$PROJECT_DIR$/douban/items.py" />
         <option value="$PROJECT_DIR$/person.json" />
+        <option value="$PROJECT_DIR$/.gitigore" />
       </list>
     </option>
   </component>
@@ -764,11 +764,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitigore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="0" selection-start="21" selection-end="21" vertical-scroll-proportion="0.093603745" vertical-offset="0" max-vertical-offset="641" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/douban/mongo/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1" column="0" selection-start="20" selection-end="20" vertical-scroll-proportion="0.031201247" vertical-offset="0" max-vertical-offset="641" />
@@ -822,6 +817,13 @@
     <entry file="file://$PROJECT_DIR$/person.json">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1" column="0" selection-start="2" selection-end="2" vertical-scroll-proportion="-0.6896552" vertical-offset="0" max-vertical-offset="160">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitigore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="0" selection-start="31" selection-end="31" vertical-scroll-proportion="0.16806723" vertical-offset="0" max-vertical-offset="476">
           <folding />
         </state>
       </provider>
