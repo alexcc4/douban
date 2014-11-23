@@ -24,10 +24,8 @@ class FilmSpider(CrawlSpider):
     start_urls = [
         'http://movie.douban.com/nowplaying/guangzhou/',
         'http://movie.douban.com/later/guangzhou/'
-        ]
-    # rules = (
-    #     Rule(LinkExtractor(allow=('\/subject\/\d+\/',)), callback='parse_film'),
-    # )
+    ]
+
     film_pre_url = 'http://movie.douban.com/subject/'
     film_suf_url = '/?from=playing_poster'
 
@@ -51,41 +49,41 @@ class FilmSpider(CrawlSpider):
         @parse the film item from the page
         '''
         status = response.request.headers["status"]
-        log.msg(response.url + '~~~~~~~~~~~~~~~~~~~~~')
+        # log.msg(response.url + '~~~~~~~~~~~~~~~~~~~~~')
 
         sel = Selector(response)
         content = response.body
 
         item = FilmItem()
-        infomation = {}
+        information = {}
 
-        infomation["name"] = sel.xpath("//h1/span[@property='v:itemreviewed']/text()").extract()[0]
-        infomation["year"] = sel.xpath("//h1/span[@class='year']/text()").extract()[0].replace('(', '').replace(')', '')
+        information["name"] = sel.xpath("//h1/span[@property='v:itemreviewed']/text()").extract()[0]
+        information["year"] = sel.xpath("//h1/span[@class='year']/text()").extract()[0].replace('(', '').replace(')', '')
 
         info = sel.xpath("//div[@id='info']")
-        infomation["director"] = info.xpath("//span/a[@rel='v:directedBy']/text()").extract()[0]
-        infomation["screenwriter"] = sel.xpath("//div[@id='info']/span[2]/a/text()").extract()
-        infomation["starring"] = sel.xpath("//div[@id='info']/span[2]/a/text()").extract()
-        infomation["style"] = info.xpath("//span[@property='v:genre']/text()").extract()
+        information["director"] = info.xpath("//span/a[@rel='v:directedBy']/text()").extract()[0]
+        information["screenwriter"] = sel.xpath("//div[@id='info']/span[2]/a/text()").extract()
+        information["starring"] = sel.xpath("//div[@id='info']/span[2]/a/text()").extract()
+        information["style"] = info.xpath("//span[@property='v:genre']/text()").extract()
 
         producedIn_reg = r'''<span class="pl">制片国家/地区:</span>(.*?)<'''
         language_reg = r'''<span class="pl">语言:</span>(.*?)<'''
         aliases_reg = r'''<span class="pl">又名:</span>(.*?)<'''
         IMDb_reg = r'''<span class="pl">IMDb链接:</span>\s*<a.*?href="(.*?)"'''
-        infomation["producedIn"] = re.compile(producedIn_reg, re.S).search(content).group(1)
-        infomation["language"] = re.compile(language_reg, re.S).search(content).group(1)
+        information["producedIn"] = re.compile(producedIn_reg, re.S).search(content).group(1)
+        information["language"] = re.compile(language_reg, re.S).search(content).group(1)
 
         aliases_res = re.compile(aliases_reg, re.S).search(content)
         if aliases_res:
-            infomation["aliases"] = aliases_res.group(1).decode('utf-8')
+            information["aliases"] = aliases_res.group(1).decode('utf-8')
         IMDb_res = re.compile(IMDb_reg, re.S).search(content)
         if IMDb_res:
-            infomation["IMDb"] = IMDb_res.group(1)
+            information["IMDb"] = IMDb_res.group(1)
 
-        infomation["dateToRelease"] = info.xpath("//span[@property='v:initialReleaseDate']/text()").extract()
+        information["dateToRelease"] = info.xpath("//span[@property='v:initialReleaseDate']/text()").extract()
         length_res = info.xpath("//span[@property='v:runtime']/text()")
         if length_res:
-            infomation["length"] = length_res.extract()[0]
+            information["length"] = length_res.extract()[0]
         #TODO decode('utf-8')?
         item["synopsis"] = sel.xpath("//span[@property='v:summary']/text()")[0].extract()
         item["tags"] = sel.xpath("//div[@class='tags-body']/a/text()").extract()
@@ -97,14 +95,15 @@ class FilmSpider(CrawlSpider):
         if review_res:
             item["reviews"] = review_res
 
-        item["info"] = infomation
+        item["info"] = information
         item['createAt'] = int(time.time() * 1000)
-        mongo = mongoCon()
-        if mongo:
-            films = mongo.douban.films
-            if not films.find_one({"name": infomation['name'], "year": infomation['year']}):
-                films.insert(dict(item))
-            else:
-                films.update({"name": infomation['name'], "year": infomation['year']}, dict(item))
+        return item
+        # mongo = mongoCon()
+        # if mongo:
+        #     films = mongo.douban.films
+        #     if not films.find_one({"name": information['name'], "year": information['year']}):
+        #         films.insert(dict(item))
+        #     else:
+        #         films.update({"name": information['name'], "year": information['year']}, dict(item))
         # log.msg(item["tags"][0].decode('utf-8') + '~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
 

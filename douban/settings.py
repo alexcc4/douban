@@ -23,6 +23,10 @@ DOWNLOADER_MIDDLEWARES = {
         'douban.spiders.rotate_useragent.RotateUserAgentMiddleware': 400
     }
 
+ITEM_PIPELINES = {
+    'douban.pipelines.DoubanPipeline': 300,
+}
+
 DB_HOST = 'localhost'
 DB_PORT = 27017
 DB = 'films'
