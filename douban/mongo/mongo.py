@@ -7,6 +7,7 @@ from scrapy import log
 
 settings = get_project_settings()
 
+
 def mongoCon():
     try:
         mongo = MongoClient(settings.get('DB_HOST'), settings.get('DB_PORT'))

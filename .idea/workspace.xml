@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e3480d08-cabc-479f-af8e-4b73ef8d9400" name="Default" comment="" />
+    <list default="true" id="e3480d08-cabc-479f-af8e-4b73ef8d9400" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/film.json" afterPath="$PROJECT_DIR$/film.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/douban/spiders/filmSpider.py" afterPath="$PROJECT_DIR$/douban/spiders/filmSpider.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/douban/items.py" afterPath="$PROJECT_DIR$/douban/items.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/douban/mongo/mongo.py" afterPath="$PROJECT_DIR$/douban/mongo/mongo.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/douban/pipelines.py" afterPath="$PROJECT_DIR$/douban/pipelines.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="douban.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -12,7 +19,7 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/douban$get_films.coverage" NAME="get_films Coverage Results" MODIFIED="1415118657617" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/douban$get_films.coverage" NAME="get_films Coverage Results" MODIFIED="1417953164621" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/douban$personSpider.coverage" NAME="personSpider Coverage Results" MODIFIED="1415118647309" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/douban/spiders" />
   </component>
   <component name="CreatePatchCommitExecutor">
@@ -27,10 +34,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="get_films.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="get_films.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/get_films.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="15" selection-start="532" selection-end="532" vertical-scroll-proportion="0.23084995" vertical-offset="0" max-vertical-offset="953">
+            <state line="19" column="0" selection-start="559" selection-end="559" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="480">
               <folding />
             </state>
           </provider>
@@ -39,7 +46,7 @@
       <file leaf-file-name="items.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/douban/items.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="0" selection-start="445" selection-end="445" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="540">
+            <state line="16" column="18" selection-start="365" selection-end="365" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="540">
               <folding />
             </state>
           </provider>
@@ -48,7 +55,16 @@
       <file leaf-file-name="person.json" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/person.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="11" selection-start="176" selection-end="176" vertical-scroll-proportion="-7.586207" vertical-offset="0" max-vertical-offset="400">
+            <state line="9" column="19" selection-start="148" selection-end="148" vertical-scroll-proportion="-6.206897" vertical-offset="0" max-vertical-offset="400">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="film.json" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/film.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="16" column="17" selection-start="337" selection-end="337" vertical-scroll-proportion="-11.034483" vertical-offset="0" max-vertical-offset="540">
               <folding />
             </state>
           </provider>
@@ -57,7 +73,7 @@
       <file leaf-file-name="filmSpider.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/douban/spiders/filmSpider.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="0" selection-start="589" selection-end="589" vertical-scroll-proportion="0.0" vertical-offset="900" max-vertical-offset="2300">
+            <state line="13" column="0" selection-start="230" selection-end="230" vertical-scroll-proportion="0.0" vertical-offset="420" max-vertical-offset="2440">
               <folding>
                 <element signature="e#46#55#0" expanded="true" />
               </folding>
@@ -77,20 +93,19 @@
       <file leaf-file-name="pipelines.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/douban/pipelines.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="43" selection-start="431" selection-end="431" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="580">
-              <folding>
-                <marker date="1416747576046" expanded="true" signature="263:725" placeholder="..." />
-                <marker date="1416747576046" expanded="true" signature="288:320" placeholder="..." />
-              </folding>
+            <state line="6" column="29" selection-start="221" selection-end="221" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="600">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mongo.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="mongo.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/douban/mongo/mongo.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="0" selection-start="410" selection-end="410" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="480">
-              <folding />
+            <state line="17" column="0" selection-start="411" selection-end="411" vertical-scroll-proportion="0.3567681" vertical-offset="0" max-vertical-offset="953">
+              <folding>
+                <element signature="e#46#77#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -110,17 +125,17 @@
       <list>
         <option value="$PROJECT_DIR$/douban/get_films.py" />
         <option value="$PROJECT_DIR$/douban/spiders/rotate_useragent.py" />
-        <option value="$PROJECT_DIR$/film.json" />
         <option value="$PROJECT_DIR$/douban/mongo/__init__.py" />
-        <option value="$PROJECT_DIR$/douban/mongo/mongo.py" />
-        <option value="$PROJECT_DIR$/douban/items.py" />
         <option value="$PROJECT_DIR$/person.json" />
         <option value="$PROJECT_DIR$/douban/settings.py" />
-        <option value="$PROJECT_DIR$/douban/pipelines.py" />
-        <option value="$PROJECT_DIR$/douban/spiders/filmSpider.py" />
         <option value="$PROJECT_DIR$/.gitigore" />
         <option value="$PROJECT_DIR$/douban/spiders/personSpider.py" />
         <option value="$PROJECT_DIR$/get_films.py" />
+        <option value="$PROJECT_DIR$/douban/mongo/mongo.py" />
+        <option value="$PROJECT_DIR$/film.json" />
+        <option value="$PROJECT_DIR$/douban/items.py" />
+        <option value="$PROJECT_DIR$/douban/spiders/filmSpider.py" />
+        <option value="$PROJECT_DIR$/douban/pipelines.py" />
       </list>
     </option>
   </component>
@@ -368,9 +383,6 @@
       <option name="PARAMETERS" value="" />
       <method />
     </configuration>
-    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
-      <method />
-    </configuration>
     <configuration default="true" type="tests" factoryName="Unittests">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -392,6 +404,9 @@
       <option name="PUREUNITTEST" value="true" />
       <option name="PARAMS" value="" />
       <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
       <method />
     </configuration>
     <configuration default="true" type="tests" factoryName="Doctests">
@@ -461,21 +476,21 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17304583" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.37704918" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.37639877" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -493,9 +508,9 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23499268" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -526,7 +541,9 @@
     <entry file="file://$PROJECT_DIR$/douban/mongo/mongo.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="4" column="0" selection-start="78" selection-end="78" vertical-scroll-proportion="0.0" vertical-offset="80" max-vertical-offset="240">
-          <folding />
+          <folding>
+            <element signature="e#46#77#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -537,9 +554,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/douban/spiders/rotate_useragent.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="3" selection-start="523" selection-end="523" vertical-scroll-proportion="0.0" vertical-offset="460" max-vertical-offset="1520">
-          <folding />
-        </state>
+        <state line="23" column="3" selection-start="523" selection-end="523" vertical-scroll-proportion="0.0" vertical-offset="460" max-vertical-offset="1520" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/film.json">
@@ -572,9 +587,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/douban/spiders/rotate_useragent.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="3" selection-start="523" selection-end="523" vertical-scroll-proportion="0.0" vertical-offset="460" max-vertical-offset="1520">
-          <folding />
-        </state>
+        <state line="23" column="3" selection-start="523" selection-end="523" vertical-scroll-proportion="0.0" vertical-offset="460" max-vertical-offset="1520" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/film.json">
@@ -607,9 +620,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/douban/spiders/rotate_useragent.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="3" selection-start="523" selection-end="523" vertical-scroll-proportion="0.0" vertical-offset="460" max-vertical-offset="1520">
-          <folding />
-        </state>
+        <state line="23" column="3" selection-start="523" selection-end="523" vertical-scroll-proportion="0.0" vertical-offset="460" max-vertical-offset="1520" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/film.json">
@@ -642,9 +653,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/douban/spiders/rotate_useragent.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="3" selection-start="523" selection-end="523" vertical-scroll-proportion="0.0" vertical-offset="460" max-vertical-offset="1520">
-          <folding />
-        </state>
+        <state line="23" column="3" selection-start="523" selection-end="523" vertical-scroll-proportion="0.0" vertical-offset="460" max-vertical-offset="1520" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/film.json">
@@ -677,9 +686,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/douban/spiders/rotate_useragent.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="3" selection-start="523" selection-end="523" vertical-scroll-proportion="0.0" vertical-offset="460" max-vertical-offset="1520">
-          <folding />
-        </state>
+        <state line="23" column="3" selection-start="523" selection-end="523" vertical-scroll-proportion="0.0" vertical-offset="460" max-vertical-offset="1520" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/film.json">
@@ -717,9 +724,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/douban/spiders/rotate_useragent.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="3" selection-start="523" selection-end="523" vertical-scroll-proportion="0.0" vertical-offset="460" max-vertical-offset="1520">
-          <folding />
-        </state>
+        <state line="23" column="3" selection-start="523" selection-end="523" vertical-scroll-proportion="0.0" vertical-offset="460" max-vertical-offset="1520" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/film.json">
@@ -757,9 +762,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/douban/spiders/rotate_useragent.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="3" selection-start="523" selection-end="523" vertical-scroll-proportion="0.0" vertical-offset="460" max-vertical-offset="1520">
-          <folding />
-        </state>
+        <state line="23" column="3" selection-start="523" selection-end="523" vertical-scroll-proportion="0.0" vertical-offset="460" max-vertical-offset="1520" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/film.json">
@@ -797,14 +800,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/douban/spiders/rotate_useragent.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="3" selection-start="523" selection-end="523" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1520">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/film.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="16" selection-start="396" selection-end="396" vertical-scroll-proportion="0.64735943" vertical-offset="0" max-vertical-offset="587" />
+        <state line="23" column="3" selection-start="523" selection-end="523" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1520" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/douban/settings.py">
@@ -814,66 +810,66 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/douban/pipelines.py">
+    <entry file="file://$PROJECT_DIR$/.gitigore">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="43" selection-start="431" selection-end="431" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="580">
-          <folding>
-            <marker date="1416747576046" expanded="true" signature="263:725" placeholder="..." />
-            <marker date="1416747576046" expanded="true" signature="288:320" placeholder="..." />
-          </folding>
-        </state>
+        <state line="4" column="0" selection-start="32" selection-end="32" vertical-scroll-proportion="0.1362862" vertical-offset="0" max-vertical-offset="587" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/douban/mongo/mongo.py">
+    <entry file="file://$PROJECT_DIR$/douban/spiders/personSpider.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="0" selection-start="410" selection-end="410" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="520">
+        <state line="57" column="33" selection-start="1836" selection-end="1836" vertical-scroll-proportion="1.1962224" vertical-offset="0" max-vertical-offset="1860" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/get_films.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="0" selection-start="559" selection-end="559" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="480">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitigore">
+    <entry file="file://$PROJECT_DIR$/person.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="0" selection-start="32" selection-end="32" vertical-scroll-proportion="0.1362862" vertical-offset="0" max-vertical-offset="587">
+        <state line="9" column="19" selection-start="148" selection-end="148" vertical-scroll-proportion="-6.206897" vertical-offset="0" max-vertical-offset="400">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/douban/pipelines.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="29" selection-start="221" selection-end="221" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="600">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/douban/items.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="18" selection-start="365" selection-end="365" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="540">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/douban/spiders/filmSpider.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="0" selection-start="589" selection-end="589" vertical-scroll-proportion="0.0" vertical-offset="900" max-vertical-offset="2300">
+        <state line="13" column="0" selection-start="230" selection-end="230" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2440">
           <folding>
             <element signature="e#46#55#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/douban/items.py">
+    <entry file="file://$PROJECT_DIR$/film.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="0" selection-start="445" selection-end="445" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="540">
+        <state line="16" column="17" selection-start="337" selection-end="337" vertical-scroll-proportion="-11.034483" vertical-offset="0" max-vertical-offset="540">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/douban/spiders/personSpider.py">
+    <entry file="file://$PROJECT_DIR$/douban/mongo/mongo.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="33" selection-start="1836" selection-end="1836" vertical-scroll-proportion="1.1962224" vertical-offset="0" max-vertical-offset="1860">
+        <state line="17" column="0" selection-start="411" selection-end="411" vertical-scroll-proportion="0.3567681" vertical-offset="0" max-vertical-offset="953">
           <folding>
-            <element signature="e#46#55#0" expanded="true" />
+            <element signature="e#46#77#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/person.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="11" selection-start="176" selection-end="176" vertical-scroll-proportion="-7.586207" vertical-offset="0" max-vertical-offset="400">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/get_films.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="15" selection-start="532" selection-end="532" vertical-scroll-proportion="0.23084995" vertical-offset="0" max-vertical-offset="953">
-          <folding />
         </state>
       </provider>
     </entry>

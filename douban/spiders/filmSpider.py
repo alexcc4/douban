@@ -8,9 +8,9 @@ from scrapy.contrib.spiders import CrawlSpider
 from scrapy import log
 from scrapy import Selector
 from scrapy import Request
-from douban.mongo.mongo import mongoCon
 
 from douban.items import FilmItem
+
 
 class FilmSpider(CrawlSpider):
     '''
@@ -38,7 +38,8 @@ class FilmSpider(CrawlSpider):
         if status == 'nowplaying':
             ids = Selector(response).xpath("//div[@class='mod-bd']/ul/li/@id").extract()
             for film_id in ids:
-                yield Request(self.film_pre_url + film_id + self.film_suf_url, headers={"status": status}, callback=self.parse_film)
+                yield Request(self.film_pre_url + film_id + self.film_suf_url, headers={"status": status},
+                              callback=self.parse_film)
         else:
             urls = Selector(response).xpath("//a[@class='thumb']/@href").extract()
             for film_url in urls:
@@ -49,7 +50,6 @@ class FilmSpider(CrawlSpider):
         @parse the film item from the page
         '''
         status = response.request.headers["status"]
-        # log.msg(response.url + '~~~~~~~~~~~~~~~~~~~~~')
 
         sel = Selector(response)
         content = response.body
@@ -60,11 +60,13 @@ class FilmSpider(CrawlSpider):
         information["name"] = sel.xpath("//h1/span[@property='v:itemreviewed']/text()").extract()[0]
         information["year"] = sel.xpath("//h1/span[@class='year']/text()").extract()[0].replace('(', '').replace(')', '')
 
-        info = sel.xpath("//div[@id='info']")
-        information["director"] = info.xpath("//span/a[@rel='v:directedBy']/text()").extract()[0]
-        information["screenwriter"] = sel.xpath("//div[@id='info']/span[2]/a/text()").extract()
-        information["starring"] = sel.xpath("//div[@id='info']/span[2]/a/text()").extract()
-        information["style"] = info.xpath("//span[@property='v:genre']/text()").extract()
+        information["director"] = sel.xpath("//span/a[@rel='v:directedBy']/text()").extract()[0]
+        information["screenwriter"] = sel.xpath("//div[@id='info']/span[2]/span[2]/a/text()").extract()
+        information["starring"] = sel.xpath("//span[@class='actor']/span[2]/a/text()").extract()
+        information["style"] = sel.xpath("//span[@property='v:genre']/text()").extract()
+
+        is_rating = sel.xpath("//strong[@class='ll rating_num']/text()")
+        item['rating'] = float(is_rating[0].extract()) if is_rating else None
 
         producedIn_reg = r'''<span class="pl">制片国家/地区:</span>(.*?)<'''
         language_reg = r'''<span class="pl">语言:</span>(.*?)<'''
@@ -75,35 +77,40 @@ class FilmSpider(CrawlSpider):
 
         aliases_res = re.compile(aliases_reg, re.S).search(content)
         if aliases_res:
-            information["aliases"] = aliases_res.group(1).decode('utf-8')
+            information["aliases"] = aliases_res.group(1)
         IMDb_res = re.compile(IMDb_reg, re.S).search(content)
         if IMDb_res:
             information["IMDb"] = IMDb_res.group(1)
 
-        information["dateToRelease"] = info.xpath("//span[@property='v:initialReleaseDate']/text()").extract()
-        length_res = info.xpath("//span[@property='v:runtime']/text()")
+        information["dateToRelease"] = sel.xpath("//span[@property='v:initialReleaseDate']/text()").extract()
+        length_res = sel.xpath("//span[@property='v:runtime']/text()")
         if length_res:
             information["length"] = length_res.extract()[0]
-        #TODO decode('utf-8')?
+
         item["synopsis"] = sel.xpath("//span[@property='v:summary']/text()")[0].extract()
         item["tags"] = sel.xpath("//div[@class='tags-body']/a/text()").extract()
         item['status'] = status
-        commentary_res = sel.xpath("//div[@class='comment']/p/text()").extract()
-        if commentary_res:
-            item["commentary"] = commentary_res
-        review_res = sel.xpath("//div[@class='review-bd']/div/span/text()").extract()
-        if review_res:
-            item["reviews"] = review_res
+        commentary_res = sel.xpath("//div[@class='comment']")
+
+        item['commentary'] = []
+        item['reviews'] = []
+        for i in commentary_res:
+            comment = {
+                "author": i.xpath("./h3/span[2]/a/text()")[0].extract(),
+                # "time_str": i.xpath("./h3/span[2]/span[2]/text()")[0].extract(),
+                "content": i.xpath("./p/text()")[0].extract()
+            }
+            item['commentary'].append(comment)
+
+        review_res = sel.xpath("//div[@class='review']")
+        for i in review_res:
+            review = {
+                "author": i.xpath("./div[1]/div/a/text()")[0].extract(),
+                "time_str": i.xpath("./div[1]/div/text()[2]")[0].extract(),
+                "content": i.xpath("./div[2]/div/span/text()")[0].extract()
+            }
+            item['reviews'].append(review)
 
         item["info"] = information
         item['createAt'] = int(time.time() * 1000)
         return item
-        # mongo = mongoCon()
-        # if mongo:
-        #     films = mongo.douban.films
-        #     if not films.find_one({"name": information['name'], "year": information['year']}):
-        #         films.insert(dict(item))
-        #     else:
-        #         films.update({"name": information['name'], "year": information['year']}, dict(item))
-        # log.msg(item["tags"][0].decode('utf-8') + '~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
-
