@@ -1,1 +1,7 @@
-date 2014-9-22 I fork a res
+douban
+======
+
+crawl films in douban
+stored in mongodb
+
+
