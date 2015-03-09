@@ -18,7 +18,4 @@ class DoubanPipeline(object):
         if self.mongo:
             films = self.mongo.douban.films
             information = item['info']
-            # if not films.find_one({"name": information['name'], "year": information['year']}):
-            #     films.insert(dict(item))
-            # else:
             films.update({"name": information['name'], "year": information['year']}, dict(item), True)

@@ -97,7 +97,6 @@ class FilmSpider(CrawlSpider):
         for i in commentary_res:
             comment = {
                 "author": i.xpath("./h3/span[2]/a/text()")[0].extract(),
-                # "time_str": i.xpath("./h3/span[2]/span[2]/text()")[0].extract(),
                 "content": i.xpath("./p/text()")[0].extract()
             }
             item['commentary'].append(comment)

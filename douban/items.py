@@ -10,7 +10,6 @@ from scrapy import Item, Field
 
 class FilmItem(Item):
     # define the fields for your item here like:
-    # name = scrapy.Field()
     rating = Field()
     info = Field()
     synopsis = Field()
